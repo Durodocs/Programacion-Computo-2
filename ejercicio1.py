@@ -28,7 +28,8 @@ class PersonalInfoWindow(QWidget):
         # edad centrada
         self.age_label = QLabel('Edad: 20 años')
         self.age_label.setAlignment(Qt.AlignLeft)  # Alinear el texto a la izquierda
-        self.age_label.setFont(QFont('Verdana', 14, QFont.Italic))  # Fuente Verdana, tamaño 14, cursiva
+        self.age_label.setFont(QFont('Verdana', 14, QFont.StyleItalic))  # Fuente Verdana, tamaño 14, cursiva
+
         self.age_label.setStyleSheet("color: #ff6347;")  # Color de texto rojo tomate
 
         layout.addWidget(self.age_label)
