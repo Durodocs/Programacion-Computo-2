@@ -16,7 +16,7 @@ bars = role_counts.plot(kind='bar', color=colors[:len(role_counts)])
 
 # Añadir título y etiquetas
 plt.title('Roles de agentes de Valorant')
-plt.xlabel('Rol')
+plt.xlabel('Roles')
 plt.ylabel('Agentes con rol de:')
 plt.xticks(rotation=45)  # Rotar etiquetas del eje x
 
