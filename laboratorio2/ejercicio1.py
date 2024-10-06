@@ -11,22 +11,18 @@ colors = ['skyblue', 'salmon', 'lightgreen', 'gold', 'violet']
 
 
 # Crear la gráfica de barras
-plt.figure(figsize=(10, 6))  # Ajusta el tamaño de la figura
-bars = role_counts.plot(kind='bar', color=colors[:len(role_counts)])
-
+plt.figure(figsize=(10, 6)) 
+bars = role_counts.plot(kind='bar', color=colors[:len(role_counts)], width=0.3)
 # Añadir título y etiquetas
 plt.title('Roles de agentes de Valorant')
 plt.xlabel('Roles')
 plt.ylabel('Agentes con rol de:')
-plt.xticks(rotation=45)  # Rotar etiquetas del eje x
+plt.xticks(rotation=45) 
 
-# Calcular y mostrar el porcentaje en cada barra
-total_count = role_counts.sum()
-for bar in bars.patches:
-    height = bar.get_height()
-    percentage = (height / total_count) * 100  # Calcular el porcentaje
-    plt.text(bar.get_x() + bar.get_width() / 2, height, f'{percentage:.1f}%', ha='center', va='bottom')
+# Ajustar el eje y para que se adapte a los datos y aumente de 2 en 2
+plt.yticks(range(0, 11, 2))
 
 # Ajustar el diseño y mostrar la gráfica
-plt.tight_layout()  # Ajustar el diseño
+plt.tight_layout() 
+
 plt.show()
