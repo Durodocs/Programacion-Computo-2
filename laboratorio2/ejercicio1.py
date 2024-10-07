@@ -14,7 +14,7 @@ colors = ['skyblue', 'salmon', 'lightgreen', 'gold', 'violet']
 plt.figure(figsize=(10, 6)) 
 bars = role_counts.plot(kind='bar', color=colors[:len(role_counts)], width=0.3)
 # Añadir título y etiquetas
-plt.title('Roles de agentes de Valorant')
+plt.title('')
 plt.xlabel('Roles')
 plt.ylabel('Agentes con rol de:')
 plt.xticks(rotation=45) 
